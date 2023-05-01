@@ -10,6 +10,11 @@ TODAY = date.today().strftime("%Y-%m-%d")
 
 streamlit.title("Stock Market Forecasting")
 
+with streamlit.expander("About the project"):
+    streamlit.write("This project involves creating a live dashboard for stock prices that provides real-time updates. The web application is designed to scrape real-time stock market data based on user input about the stock name. The dashboard then visualizes time series data over the years, allowing users to analyze trends and patterns. Additionally, the system generates forecasts for the stock's closing prices in the coming months, providing users with valuable insights into future market trends." )
+
+
+
 # stocks = ("AAPL","GOOG","MSFT","AMZN") #Change this to use input and add other stock options
 # selected_stock = streamlit.selectbox("Select a stock from below for forecasting",stocks) #add a input text widget
 selected_stock = streamlit.text_input("Type a stock name of choice for forecasting. eg: AAPL, GOOG, MSFT, AMZN r.t.c ", value="AAPL")
